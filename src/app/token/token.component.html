@@ -1,0 +1,7 @@
+<div *ngIf="ledger.length">
+    <h2>Your transaction ledger: </h2>
+    <ul *ngFor="let data of ledger">
+      <li *ngIf="data.type === 'buyToken'">{{username}} purchased {{data.tokens}} tokens for ${{data.cost}} with the description 'Card refill'</li>
+      <li *ngIf="data.type === 'game'">{{username}} has used {{data.tokens}} tokens with the description of {{data.name}} game</li>
+    </ul>
+</div>
